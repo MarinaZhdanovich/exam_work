@@ -3,3 +3,5 @@
 
 
 
+![Block diagram](https://github.com/MarinaZhdanovich/exam_work/blob/main/Blockdiagram.jpg)
+

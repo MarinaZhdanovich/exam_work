@@ -27,4 +27,6 @@ This code is written in C#. It is a program that creates a new array of strings 
 
 * `void PrintArray(string[] array)`. The function takes an array of strings as input and prints its contents.
 
-* `void NewShortStringArray(string[] array)`. This function takes an array of strings as input, filters the strings and outputs a new array containing only the short strings.
+* `int CountShortStringSize(string[] array)`. It counts the number of strings in the array that have a length less than or equal to 3 characters. It then returns the count as an integer.
+
+* `string[] NewShortStringArray (string[] array)`. This function takes an array of strings as input. It first calls the CountShortStringSize method to determine the number of strings that meet the condition (length <= 3). Then, it creates a new array of strings with the size equal to the count obtained. After that, it populates the new array with the qualifying strings from the input array. Finally, it returns the new array containing the qualifying strings.

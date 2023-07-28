@@ -47,7 +47,7 @@ void PrintArray(string[] array)
     Console.WriteLine("]");
 }
 
-void NewShortStringArray(string[] array)
+int CountShortStringSize(string[] array)  // определение размера нового массива
 {
     int count = 0; // количество строк, удовлетворяющих условию
     for (int i = 0; i < array.Length; i++)
@@ -55,6 +55,12 @@ void NewShortStringArray(string[] array)
         if (array[i].Length <= 3)
             count++;
     }
+    return count;
+}
+
+string[] NewShortStringArray (string[] array)  //создание нового массива, последний должен вернуть новый массив, вывод должен быть отдельно
+{   
+    int count = CountShortStringSize(array);                            
     string[] shortArray = CreateArray(count);  //создаем новый массив
     int j = 0; // индекс j для массива shortArray
     for (int i = 0; i < array.Length; i++) // заполнение массива
@@ -65,12 +71,14 @@ void NewShortStringArray(string[] array)
             j++;
         }
     }
-    PrintArray(shortArray);
+    return shortArray;
 }
+    
 int size = InputNum("Enter a size of the array: ");
 
 string[] myArray = CreateArray(size);
 FillArray(myArray);
 PrintArray(myArray);
 Console.Write("→ ");
-NewShortStringArray(myArray);
+string[] shortArray = NewShortStringArray(myArray);
+PrintArray(shortArray);
